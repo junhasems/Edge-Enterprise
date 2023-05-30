@@ -27,6 +27,9 @@ Microsoft Edge natively supports Azure AD Conditional Access. There's no need to
 
 The respective Azure AD account needs to be connected to Windows, so a [Primary Refresh Token (PRT)](https://learn.microsoft.com/azure/active-directory/devices/concept-primary-refresh-token) is sent along with the request for evaluation in the Conditional Access policy. To add a work or school account to Windows, follow the steps mentioned [in this article](https://support.microsoft.com/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32#WindowsVersion=Windows_10). Bear in mind there are limits to the amount of work or school accounts connected to Windows, as documented [here](https://learn.microsoft.com/azure/active-directory/devices/faq#i-can-t-add-more-than-3-azure-ad-user-accounts-under-the-same-user-session-on-a-windows-10-11-device--why).
 
+> [!NOTE]
+> Note that Microsoft Edge for iOS and Android can provide a device ID if the device is registered in AzureAD without signing in to Edge version 108 or later.
+
 On a compliant device, the identity accessing the resource should match the identity on the profile.  If it doesn't, you'll see a message like the one in the next screenshot. In the screenshot example, "testadmin@evostsoneboxtest.com" is the sign-in account needed to access the resource.
 
 ![Conditional access message in browser](./media/edge-security/microsoft-edge-security-conditional-access.png)
